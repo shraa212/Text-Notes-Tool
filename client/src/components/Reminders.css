@@ -1,0 +1,141 @@
+.reminders-page {
+  padding: 24px;
+  height: calc(100vh - 60px); /* Adjust if you have a topbar */
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.reminders-page h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* --- Form Section --- */
+.reminder-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+  align-items: center;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.reminder-form input {
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1 1 180px;
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reminder-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.2);
+  outline: none;
+}
+
+.reminder-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.reminder-form button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* --- Reminder List --- */
+.reminder-list {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.empty-text {
+  color: #777;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+}
+
+/* --- Reminder Card (from Reminder.jsx) --- */
+.reminder-card {
+  background: #ffffff;
+  border-left: 4px solid #007bff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.reminder-card:hover {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+
+.reminder-card.done {
+  opacity: 0.65;
+  text-decoration: line-through;
+  border-left-color: #888;
+}
+
+/* --- Due Date and Actions --- */
+.reminder-meta {
+  font-size: 12px;
+  color: #555;
+  margin-top: 8px;
+}
+
+.reminder-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.reminder-actions button {
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.reminder-actions .delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.reminder-actions .delete-btn:hover {
+  background-color: #b52a38;
+}
+
+.reminder-actions .toggle-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.reminder-actions .toggle-btn:hover {
+  background-color: #1e7e34;
+}
+
+/* --- Overdue Styling --- */
+.reminder-card.overdue {
+  border-left-color: #ff6347;
+  background: #fff4f2;
+}

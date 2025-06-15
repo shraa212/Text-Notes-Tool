@@ -1,0 +1,62 @@
+.canvas-section {
+  padding: 24px;
+  flex: 1;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.note-section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 16px 0 12px;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.add-note-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  font-size: 28px;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  z-index: 500;
+}
+
+.add-note-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .notes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(90vw, 1fr));
+    gap: 16px;
+  }
+
+  .add-note-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+}

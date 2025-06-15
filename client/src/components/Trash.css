@@ -1,0 +1,81 @@
+.trash-container {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.trash-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.trash-note {
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  position: relative;
+  background-color: #fefefe; /* Slight off-white background for deleted feel */
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.trash-note:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.trash-content {
+  white-space: pre-wrap;
+  min-height: 60px;
+  margin-bottom: 0.5rem;
+}
+
+.trash-labels {
+  margin-top: 0.5rem;
+}
+
+.trash-label {
+  display: inline-block;
+  background: rgba(0,0,0,0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  margin-right: 4px;
+}
+
+.trash-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+}
+
+.delete-btn {
+  color: red;
+}
+
+.empty-msg {
+  text-align: center;
+  margin-top: 2rem;
+  font-style: italic;
+  color: #888;
+}
+
+.trash-actions button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  transition: background 0.2s;
+  border-radius: 4px;
+}
+
+.trash-actions button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.delete-btn:hover {
+  background: rgba(255, 0, 0, 0.1);
+  color: darkred;
+}
